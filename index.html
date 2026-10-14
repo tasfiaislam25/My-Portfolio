@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Personal homepage of Tasfia — CSE student at BRAC University passionate about web development, algorithms, and open-source."
+    />
+    <meta name="author" content="Tasfia" />
+    <title>Tasfia — Personal Homepage | CSE 391</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css?v=4" />
+
+    <!-- Internal CSS (minor overrides) -->
+    <style>
+      /* highlight for inline code snippets */
+      code {
+        font-family: "JetBrains Mono", monospace;
+        background: rgba(88, 166, 255, 0.1);
+        color: #58a6ff;
+        padding: 0.1em 0.4em;
+        border-radius: 4px;
+        font-size: 0.88em;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Skip navigation for accessibility -->
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <!-- ===================== NAVBAR ===================== -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <span class="nav-brand">Tasfia</span>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button
+        class="theme-toggle"
+        id="themeToggle"
+        aria-label="Toggle dark/light mode"
+      >
+        <span id="themeIcon">☀️</span> <span id="themeLabel">Light</span>
+      </button>
+    </nav>
+
+    <!-- ===================== HERO ===================== -->
+    <main id="main-content">
+      <section class="hero" id="home" aria-labelledby="hero-heading">
+        <div class="hero-content">
+          <h1 id="hero-heading">
+            <span class="hero-line line-1"
+              >Hi, I'm <span class="highlight-word">Tasfia</span></span
+            >
+            <span class="hero-line line-2"
+              >working with AI and web development.</span
+            >
+          </h1>
+          <p class="hero-tagline">
+            Computer Science &amp; Engineering undergraduate at
+            <a
+              href="https://www.bracu.ac.bd"
+              target="_blank"
+              rel="noopener noreferrer"
+              >BRAC University</a
+            >
+            focused on multimodal AI for healthcare, explainable machine
+            learning, and creating impactful full-stack digital experiences.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn-primary">Get in touch →</a>
+            <a href="#projects" class="btn-secondary">View projects</a>
+          </div>
+        </div>
+
+        <div class="hero-photo-wrap">
+          <div class="hero-photo-frame">
+            <img
+              src="images/toushi.jpg"
+              alt="Portrait of Tasfia"
+              onerror="
+                this.style.display = 'none';
+                this.nextElementSibling.style.display = 'flex';
+              "
+            />
+            <div class="photo-fallback" aria-label="Tasfia profile placeholder">
+              T
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== SUMMARY ===================== -->
+      <section class="section" id="about" aria-labelledby="about-heading">
+        <p class="section-label">Summary</p>
+        <h2 class="section-title" id="about-heading">About Me</h2>
+        <div class="summary-box">
+          <p>
+            Computer Science &amp; Engineering undergraduate at BRAC University
+            with experience in multimodal deep learning for medical diagnosis,
+            explainable AI, bioinformatics, and full-stack web development.
+          </p>
+        </div>
+      </section>
+
+      <!-- ===================== EDUCATION ===================== -->
+      <section class="section" id="education" aria-labelledby="edu-heading">
+        <p class="section-label">Education</p>
+        <h2 class="section-title" id="edu-heading">Academic Journey</h2>
+
+        <div class="education-header">
+          <div>
+            <h3>BRAC University, Dhaka</h3>
+            <p class="meta-line">B.Sc. in Computer Science &amp; Engineering</p>
+          </div>
+        </div>
+
+        <div class="school-college-list">
+          <div class="study-item">
+            <h4>College</h4>
+            <p>Siddheswari Girls College</p>
+            <span>Science</span>
+          </div>
+          <div class="study-item">
+            <h4>School</h4>
+            <p>Motijheel Govt Girls High School</p>
+            <span>Science</span>
+          </div>
+        </div>
+
+        <div class="thesis-block">
+          <h4>Undergraduate Thesis</h4>
+          <p class="thesis-title">
+            A Robust Attention-Based Multimodal Fusion Model with XAI for
+            Thoracic Disease Detection
+            <span>2026</span>
+          </p>
+          <p class="thesis-meta">
+            Team of 5 / Supervisor: Dr. Amitabha Chakrabarty, BRAC University
+          </p>
+
+          <ul class="cv-list">
+            <li>
+              Built a tri-modal diagnostic framework fusing chest X-ray, ECG,
+              and blood laboratory data on the SyntheMIC dataset to predict five
+              thoracic conditions: Atelectasis, Cardiomegaly, Edema, Lung
+              Opacity, and Pleural Effusion.
+            </li>
+            <li>
+              Benchmarked 25 unimodal and fusion models; the best, a
+              decision-level fusion of a CXR encoder, 1D ResNet (ECG), and
+              FT-Transformer (blood labs), reached 0.836 macro-AUC,
+              outperforming the best single modality (CXR, 0.819) and the
+              reproduced XEB-FuseNet baseline (0.755).
+            </li>
+            <li>
+              Extending the baseline with systematic missing-modality robustness
+              evaluation and dual-branch explainability: Grad-CAM for image
+              regions and SHAP for clinical features.
+            </li>
+            <li>
+              Implemented in PyTorch; wrote the thesis and presented a research
+              poster.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ===================== PROJECTS ===================== -->
+      <section class="section" id="projects" aria-labelledby="proj-heading">
+        <p class="section-label">Projects</p>
+        <h2 class="section-title" id="proj-heading">Selected Work</h2>
+
+        <div class="project-list">
+          <article class="project-item">
+            <div class="project-header">
+              <h3>Rentora – Rental &amp; Importing Marketplace</h3>
+              <span class="project-link">GitHub</span>
+            </div>
+            <p class="tech-stack">
+              React, FastAPI, PostgreSQL, JavaScript | 2026
+            </p>
+            <ul class="cv-list">
+              <li>
+                Built a rental marketplace covering product discovery and
+                customer experience across categories such as wedding wear,
+                drones, tools, camping, and audio.
+              </li>
+              <li>
+                Designed an “Import on Demand” feature and an Amazon-style
+                homepage; planned local payments (bKash, Nagad) and
+                deposit/damage logic.
+              </li>
+            </ul>
+          </article>
+
+          <article class="project-item">
+            <div class="project-header">
+              <h3>Pet Image Segmentation</h3>
+            </div>
+            <p class="tech-stack">
+              Python, Deep Learning, Computer Vision | 2026
+            </p>
+            <ul class="cv-list">
+              <li>
+                Built a deep learning model to segment pets from images,
+                evaluated with segmentation metrics such as IoU and Dice.
+              </li>
+            </ul>
+          </article>
+
+          <article class="project-item">
+            <div class="project-header">
+              <h3>SnorNA-Disease Association Prediction</h3>
+              <span class="project-link">GitHub</span>
+            </div>
+            <p class="tech-stack">
+              Python, Machine Learning, Bioinformatics | 2026
+            </p>
+            <ul class="cv-list">
+              <li>
+                Predicted snoRNA-disease associations using matrix factorization
+                and machine learning.
+              </li>
+            </ul>
+          </article>
+
+          <article class="project-item">
+            <div class="project-header">
+              <h3>Student Depression Prediction</h3>
+              <span class="project-link">GitHub</span>
+            </div>
+            <p class="tech-stack">Python, Machine Learning | 2026</p>
+            <ul class="cv-list">
+              <li>
+                Built a classification pipeline predicting depression risk from
+                student survey data.
+              </li>
+            </ul>
+          </article>
+
+          <article class="project-item">
+            <div class="project-header">
+              <h3>FresherLink – Graduate Jobs &amp; Internship Platform</h3>
+              <span class="project-link">GitHub</span>
+            </div>
+            <p class="tech-stack">React, Node.js, Express, MongoDB | 2026</p>
+            <ul class="cv-list">
+              <li>
+                Contributed to a platform where fresh graduates create profiles
+                and apply for internships and entry-level jobs, and companies
+                post openings.
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- ===================== SKILLS / INTERESTS ===================== -->
+      <section class="section" id="skills" aria-labelledby="skills-heading">
+        <p class="section-label">Skills</p>
+        <h2 class="section-title" id="skills-heading">Technical Skills</h2>
+
+        <div class="skills-layout">
+          <div class="skills-group">
+            <h3>Programming</h3>
+            <div class="skills-grid">
+              <span class="skill-chip">Python</span>
+              <span class="skill-chip">JavaScript</span>
+              <span class="skill-chip">C/C++</span>
+              <span class="skill-chip">SQL</span>
+              <span class="skill-chip">8086 Assembly</span>
+            </div>
+          </div>
+
+          <div class="skills-group">
+            <h3>ML / AI</h3>
+            <div class="skills-grid">
+              <span class="skill-chip">PyTorch</span>
+              <span class="skill-chip">Multimodal Fusion</span>
+              <span class="skill-chip">Attention</span>
+              <span class="skill-chip">Grad-CAM</span>
+              <span class="skill-chip">SHAP</span>
+              <span class="skill-chip">scikit-learn</span>
+            </div>
+          </div>
+
+          <div class="skills-group">
+            <h3>Web</h3>
+            <div class="skills-grid">
+              <span class="skill-chip">React</span>
+              <span class="skill-chip">Node.js</span>
+              <span class="skill-chip">Express</span>
+              <span class="skill-chip">FastAPI</span>
+              <span class="skill-chip">MongoDB</span>
+              <span class="skill-chip">PostgreSQL</span>
+            </div>
+          </div>
+
+          <div class="skills-group">
+            <h3>Other</h3>
+            <div class="skills-grid">
+              <span class="skill-chip">Git/GitHub</span>
+              <span class="skill-chip">LaTeX</span>
+              <span class="skill-chip">Docker</span>
+              <span class="skill-chip">Linux</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="interests-block">
+          <h3>Interests</h3>
+          <ul class="interest-list">
+            <li>Drawing</li>
+            <li>Medical AI</li>
+            <li>Explainable machine learning</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ===================== CONTACT ===================== -->
+      <section class="section" id="contact" aria-labelledby="contact-heading">
+        <p class="section-label">Contact</p>
+        <h2 class="section-title" id="contact-heading">Get in Touch</h2>
+
+        <div class="contact-card">
+          <p>Dhaka, Bangladesh</p>
+          <p>
+            <strong>Email:</strong>
+            <a href="mailto:tasfiaouthi76@gmail.com">tasfiaouthi76@gmail.com</a>
+          </p>
+          <div class="contact-socials" aria-label="Social profiles">
+            <a
+              class="social-icon-link github-link"
+              href="https://github.com/tasfiaislam25"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit Tasfia on GitHub"
+              title="GitHub"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  d="M12 .8a11.2 11.2 0 0 0-3.54 21.83c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1 .1.78 1.95 3.25 1.39.1-.72.39-1.21.7-1.49-2.5-.28-5.13-1.25-5.13-5.57 0-1.23.44-2.23 1.16-3.02-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.08 1.15a10.7 10.7 0 0 1 5.61 0c2.14-1.45 3.08-1.15 3.08-1.15.61 1.55.23 2.7.11 2.98.72.79 1.16 1.79 1.16 3.02 0 4.33-2.63 5.28-5.14 5.56.4.35.75 1.03.75 2.08v3.08c0 .3.2.65.78.54A11.2 11.2 0 0 0 12 .8Z"
+                />
+              </svg>
+            </a>
+            <a
+              class="social-icon-link linkedin-link"
+              href="https://www.linkedin.com/in/tasfiaislam25/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit Tasfia on LinkedIn"
+              title="LinkedIn"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05a3.75 3.75 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.32 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12Zm1.78 13.02H3.54V9H7.1v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer role="contentinfo">
+      <div class="footer-meta">
+        <p>
+          📍 <strong>Location:</strong> <span id="pageLocation">Loading…</span>
+        </p>
+        <p>
+          🕒 <strong>Last modified:</strong>
+          <span id="lastModified">Loading…</span>
+        </p>
+      </div>
+      <div class="footer-meta" style="text-align: right">
+        <p>
+          &copy; <span id="copyrightYear"></span> Tasfia. All rights reserved.
+        </p>
+        <p>
+          Built with ❤️ for
+          <a
+            href="https://www.bracu.ac.bd"
+            target="_blank"
+            rel="noopener noreferrer"
+            >BRAC University</a
+          >.
+          <a
+            href="https://validator.w3.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            >W3C Validated</a
+          >.
+        </p>
+      </div>
+    </footer>
+
+    <!-- ===================== JAVASCRIPT ===================== -->
+    <script>
+      /* ───────────────────────────────────────────
+       1. DARK / LIGHT MODE TOGGLE  (Bonus)
+    ─────────────────────────────────────────── */
+      const themeToggle = document.getElementById("themeToggle");
+      const themeIcon = document.getElementById("themeIcon");
+      const themeLabel = document.getElementById("themeLabel");
+
+      // Respect saved preference
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "light") applyLight();
+
+      themeToggle.addEventListener("click", () => {
+        if (document.body.classList.contains("light-mode")) {
+          applyDark();
+        } else {
+          applyLight();
+        }
+      });
+
+      function applyLight() {
+        document.body.classList.add("light-mode");
+        themeIcon.textContent = "🌙";
+        themeLabel.textContent = "Dark";
+        localStorage.setItem("theme", "light");
+      }
+      function applyDark() {
+        document.body.classList.remove("light-mode");
+        themeIcon.textContent = "☀️";
+        themeLabel.textContent = "Light";
+        localStorage.setItem("theme", "dark");
+      }
+
+      /* ───────────────────────────────────────────
+       2. FOOTER: PAGE LOCATION + LAST MODIFIED
+    ─────────────────────────────────────────── */
+      document.getElementById("pageLocation").textContent =
+        window.location.href;
+      document.getElementById("lastModified").textContent =
+        document.lastModified;
+      document.getElementById("copyrightYear").textContent =
+        new Date().getFullYear();
+
+      /* ───────────────────────────────────────────
+       3. CONTACT FORM  (Bonus — sends mailto)
+    ─────────────────────────────────────────── */
+      function handleContactForm() {
+        const name = document.getElementById("fname").value.trim();
+        const email = document.getElementById("femail").value.trim();
+        const subject = document.getElementById("fsubject").value.trim();
+        const message = document.getElementById("fmessage").value.trim();
+
+        if (!name || !email || !message) {
+          alert("Please fill in Name, Email, and Message before sending.");
+          return;
+        }
+
+        // Build a mailto link so clicking it opens the user's email client
+        const to = "youremail@bracu.ac.bd";
+        const subLine = encodeURIComponent(subject || "Message from " + name);
+        const body = encodeURIComponent(
+          "Name: " + name + "\nFrom: " + email + "\n\n" + message,
+        );
+
+        window.location.href =
+          "mailto:" + to + "?subject=" + subLine + "&body=" + body;
+
+        // Show success message
+        const successDiv = document.getElementById("formSuccess");
+        successDiv.style.display = "block";
+        document.getElementById("sendBtn").disabled = true;
+        document.getElementById("sendBtn").textContent = "Sent ✓";
+      }
+
+      /* ───────────────────────────────────────────
+       4. SMOOTH ACTIVE NAV HIGHLIGHT on scroll
+    ─────────────────────────────────────────── */
+      const sections = document.querySelectorAll("section[id]");
+      const navLinks = document.querySelectorAll(".nav-links a");
+
+      const observerOpts = { rootMargin: "-40% 0px -55% 0px" };
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            navLinks.forEach((link) => {
+              link.style.color = "";
+              if (link.getAttribute("href") === "#" + entry.target.id) {
+                link.style.color = "var(--clr-accent)";
+              }
+            });
+          }
+        });
+      }, observerOpts);
+
+      sections.forEach((s) => observer.observe(s));
+    </script>
+  </body>
+</html>
